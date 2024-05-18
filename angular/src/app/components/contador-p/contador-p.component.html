@@ -1,2 +1,6 @@
-<p>{{ recibirNumero }}</p>
-<app-contador-h (agregarNumero)="enviarNumero($event)"></app-contador-h>
+<div>
+  <p>
+    El número doble es: <br /><span>{{ contadorPadre }}</span>
+  </p>
+</div>
+<app-contador-h (agregarNumero)="recibirNumero($event)"></app-contador-h>

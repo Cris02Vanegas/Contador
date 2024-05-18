@@ -10,5 +10,4 @@ import { ContadorPComponent } from "./components/contador-p/contador-p.component
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  
 }

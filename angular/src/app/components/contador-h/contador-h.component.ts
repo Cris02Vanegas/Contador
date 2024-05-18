@@ -1,4 +1,4 @@
-import { Component,Input, Output,EventEmitter } from '@angular/core';
+import { Component,Output,EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-contador-h',
@@ -9,28 +9,18 @@ import { Component,Input, Output,EventEmitter } from '@angular/core';
 })
 export class ContadorHComponent {
   contador: number = 0;
-  resultadoSuma: number =0;
 
-  @Input() nombre: string = "pepita";
-
-  @Output() agregarNumero = new EventEmitter<string>();
-
-
+  @Output() agregarNumero= new EventEmitter<number>();
+ 
   manejarClickAscendete(){
-    this.contador = this.contador + 1;
-    this.resultadoSuma = this.contador;
-  console.log(this.resultadoSuma);
+    this.contador +=1;
   }
-
-  
 
   manejarClickDescendente(){
     this.contador -=1
-    console.log(this.contador);
   }
 
   enviarNumero(){
-    this.agregarNumero.emit(this.nombre);
+    this.agregarNumero.emit(this.contador);
   }
-
 }
