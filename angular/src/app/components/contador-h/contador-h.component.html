@@ -1,9 +1,39 @@
 <section class="contador">
-  <div (click)="enviarNumero()">
-    <div class="banner">
-      <button type="button" (click)="manejarClickDescendente()">-</button>
-      <p>{{ contador }}</p>
-      <button type="button" (click)="manejarClickAscendete()">+</button>
+  <div class="banner-contador" (click)="enviarNumero()">
+    <div class="banner-inicio">
+      <input
+        class="inicio"
+        type="text"
+        placeholder="Ingrese # inicio de conteo"
+        #numero
+      />
+      <button
+        class="boton-inicio"
+        type="button"
+        (click)="numeroInicioConteo(numero.value)"
+      >
+        Inicio
+      </button>
     </div>
+    <div class="banner">
+      <button
+        class="contador-boton"
+        type="button"
+        (click)="manejarClickDescendente()"
+      >
+        -
+      </button>
+      <p>{{ contador }}</p>
+      <button
+        class="contador-boton"
+        type="button"
+        (click)="manejarClickAscendete()"
+      >
+        +
+      </button>
+    </div>
+    <button class="reset" type="button" (click)="ManejarClickReset()">
+      Reset
+    </button>
   </div>
 </section>
